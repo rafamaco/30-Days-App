@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                 ) {
-                    WoofApp()
+                    The30DaysApp()
                 }
             }
         }
@@ -61,19 +61,19 @@ class MainActivity : ComponentActivity() {
 }
 
 /**
- * Composable that displays an app bar and a list of dogs.
+ * Composable that displays an app bar and a list of days.
  */
 @Composable
-fun WoofApp() {
+fun The30DaysApp() {
     Scaffold(
         topBar = {
-            WoofTopAppBar()
+            DayTopAppBar()
         }
     ) { it ->
         LazyColumn(contentPadding = it) {
-            items(dogs) {
-                DogItem(
-                    dog = it,
+            items(days) {
+                DayItem(
+                    day = it,
                     modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
                 )
             }
@@ -82,14 +82,14 @@ fun WoofApp() {
 }
 
 /**
- * Composable that displays a list item containing a dog icon and their information.
+ * Composable that displays a list item containing a day icon and their information.
  *
- * @param dog contains the data that populates the list item
+ * @param day contains the data that populates the list item
  * @param modifier modifiers to set to this composable
  */
 @Composable
-fun DogItem(
-    dog: Dog,
+fun DayItem(
+    day: Day,
     modifier: Modifier = Modifier
 ) {
     var expanded by remember { mutableStateOf(false) }
@@ -110,17 +110,17 @@ fun DogItem(
                     .fillMaxWidth()
                     .padding(dimensionResource(R.dimen.padding_small))
             ) {
-                DogIcon(dog.imageResourceId)
-                DogInformation(dog.name, dog.age)
+                DayIcon(day.imageResourceId)
+                DayInformation(day.description, day.subtitle)
                 Spacer(Modifier.weight(1f))
-                DogItemButton(
+                DayItemButton(
                     expanded = expanded,
                     onClick = { expanded = !expanded },
                 )
             }
             if (expanded) {
-                DogHobby(
-                    dog.hobbies, modifier = Modifier.padding(
+                DayHobby(
+                    day.description, modifier = Modifier.padding(
                         start = dimensionResource(R.dimen.padding_medium),
                         top = dimensionResource(R.dimen.padding_small),
                         bottom = dimensionResource(R.dimen.padding_medium),
@@ -141,7 +141,7 @@ fun DogItem(
  * @param modifier modifiers to set to this composable
  */
 @Composable
-private fun DogItemButton(
+private fun DayItemButton(
     expanded: Boolean,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
@@ -165,7 +165,7 @@ private fun DogItemButton(
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun WoofTopAppBar(modifier: Modifier = Modifier) {
+fun DayTopAppBar(modifier: Modifier = Modifier) {
     CenterAlignedTopAppBar(
         title = {
             Row(
@@ -194,14 +194,14 @@ fun WoofTopAppBar(modifier: Modifier = Modifier) {
 }
 
 /**
- * Composable that displays a photo of a dog.
+ * Composable that displays a photo of a day.
  *
- * @param dogIcon is the resource ID for the image of the dog
+ * @param dayIcon is the resource ID for the image of the day
  * @param modifier modifiers to set to this composable
  */
 @Composable
-fun DogIcon(
-    @DrawableRes dogIcon: Int,
+fun DayIcon(
+    @DrawableRes dayIcon: Int,
     modifier: Modifier = Modifier
 ) {
     Image(
@@ -210,7 +210,7 @@ fun DogIcon(
             .padding(dimensionResource(R.dimen.padding_small))
             .clip(MaterialTheme.shapes.small),
         contentScale = ContentScale.Crop,
-        painter = painterResource(dogIcon),
+        painter = painterResource(dayIcon),
 
         // Content Description is not needed here - image is decorative, and setting a null content
         // description allows accessibility services to skip this element during navigation.
@@ -220,40 +220,40 @@ fun DogIcon(
 }
 
 /**
- * Composable that displays a dog's name and age.
+ * Composable that displays a day's name and age.
  *
- * @param dogName is the resource ID for the string of the dog's name
- * @param dogAge is the Int that represents the dog's age
+ * @param dayNumber is the resource ID for the string of the day's number
+ * @param daySubtitle is the Int that represents the day's subtitle
  * @param modifier modifiers to set to this composable
  */
 @Composable
-fun DogInformation(
-    @StringRes dogName: Int,
-    dogAge: Int,
+fun DayInformation(
+    @StringRes dayNumber: Int,
+    daySubtitle: Int,
     modifier: Modifier = Modifier
 ) {
     Column(modifier = modifier) {
         Text(
-            text = stringResource(dogName),
+            text = stringResource(dayNumber),
             style = MaterialTheme.typography.displayMedium,
             modifier = Modifier.padding(top = dimensionResource(R.dimen.padding_small))
         )
         Text(
-            text = stringResource(R.string.years_old, dogAge),
+            text = stringResource(daySubtitle),
             style = MaterialTheme.typography.bodyLarge
         )
     }
 }
 
 /**
- * Composable that displays a dog's hobbies.
+ * Composable that displays a day's hobbies.
  *
- * @param dogHobby is the resource ID for the text string of the hobby to display
+ * @param dayHobby is the resource ID for the text string of the hobby to display
  * @param modifier modifiers to set to this composable
  */
 @Composable
-fun DogHobby(
-    @StringRes dogHobby: Int,
+fun DayHobby(
+    @StringRes dayHobby: Int,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -264,7 +264,7 @@ fun DogHobby(
             style = MaterialTheme.typography.labelSmall
         )
         Text(
-            text = stringResource(dogHobby),
+            text = stringResource(R.string.about, dayHobby),
             style = MaterialTheme.typography.bodyLarge
         )
     }
@@ -275,9 +275,9 @@ fun DogHobby(
  */
 @Preview
 @Composable
-fun WoofPreview() {
+fun DayPreview() {
     _30DaysAppTheme(darkTheme = false) {
-        WoofApp()
+        The30DaysApp()
     }
 }
 
@@ -286,8 +286,8 @@ fun WoofPreview() {
  */
 @Preview
 @Composable
-fun WoofDarkThemePreview() {
+fun DayDarkThemePreview() {
     _30DaysAppTheme(darkTheme = true) {
-        WoofApp()
+        The30DaysApp()
     }
 }
