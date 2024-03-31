@@ -31,7 +31,7 @@
     <string name="day_29">Day 29</string>
     <string name="day_30">Day 30</string>
 
-    <!-- Descrições dos dias -->
+    <!-- Days Descriptions -->
     <string name="day_1_description">Adequate Hydration</string>
     <string name="day_2_description">Vegetables Every Day</string>
     <string name="day_3_description">30-Minute Walk</string>
@@ -63,7 +63,7 @@
     <string name="day_29_description">Mindfulness Practice</string>
     <string name="day_30_description">Celebration</string>
 
-    <!-- Objetivos (Goals) -->
+    <!-- Goals -->
     <string name="day_1_goal">Drink at least 8 glasses of water throughout the day.</string>
     <string name="day_2_goal">Consume a serving of vegetables in every major meal.</string>
     <string name="day_3_goal">Take a 30-minute walk.</string>
@@ -95,7 +95,7 @@
     <string name="day_29_goal">Practice mindfulness meditation to increase present-moment awareness and reduce stress.</string>
     <string name="day_30_goal">Reflect on your progress and celebrate completing the 30-day challenge.</string>
 
-    <!-- Dicas (Tips) -->
+    <!-- Tips -->
     <string name="day_1_tip">Keep a water bottle nearby to remind yourself to stay hydrated regularly.</string>
     <string name="day_2_tip">Try adding fresh vegetables to salads, sandwiches, or as a side dish in your meals.</string>
     <string name="day_3_tip">Choose a convenient time of the day and a pleasant location for your walk, such as a park or trail.</string>
@@ -127,7 +127,7 @@
     <string name="day_29_tip">Find a quiet space, sit comfortably, and focus on your breath or bodily sensations to anchor yourself in the present moment.</string>
     <string name="day_30_tip">Take time to acknowledge your efforts, achievements, and the positive changes you have made towards a healthier lifestyle.</string>
 
-    <!-- Outras strings -->
+    <!-- Others strings -->
     <string name="goal">Goal:</string>
     <string name="tip">Tip:</string>
     <string name="expand_button_content_description">See more or less information about a day.</string>
