@@ -9,6 +9,7 @@ import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -18,6 +19,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material3.Card
@@ -41,6 +43,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.a30daysapp.ui.theme._30DaysAppTheme
 
@@ -111,7 +114,7 @@ fun DayItem(
                     .padding(dimensionResource(R.dimen.padding_small))
             ) {
                 DayIcon(day.imageResourceId)
-                DayInformation(day.description, day.subtitle)
+                DayInformation(day.dayNumber, day.description)
                 Spacer(Modifier.weight(1f))
                 DayItemButton(
                     expanded = expanded,
@@ -119,12 +122,12 @@ fun DayItem(
                 )
             }
             if (expanded) {
-                DayHobby(
-                    day.description, modifier = Modifier.padding(
+                DayDetails(
+                    day.goal, day.tip, modifier = Modifier.padding(
                         start = dimensionResource(R.dimen.padding_medium),
                         top = dimensionResource(R.dimen.padding_small),
                         bottom = dimensionResource(R.dimen.padding_medium),
-                        end = dimensionResource(R.dimen.padding_medium)
+                        end = dimensionResource(R.dimen.padding_medium),
                     )
                 )
             }
@@ -175,7 +178,7 @@ fun DayTopAppBar(modifier: Modifier = Modifier) {
                     modifier = Modifier
                         .size(dimensionResource(R.dimen.image_size))
                         .padding(dimensionResource(R.dimen.padding_small)),
-                    painter = painterResource(R.drawable.ic_woof_logo),
+                    painter = painterResource(R.drawable.app_logo),
 
                     // Content Description is not needed here - image is decorative, and setting a
                     // null content description allows accessibility services to skip this element
@@ -208,13 +211,9 @@ fun DayIcon(
         modifier = modifier
             .size(dimensionResource(R.dimen.image_size))
             .padding(dimensionResource(R.dimen.padding_small))
-            .clip(MaterialTheme.shapes.small),
-        contentScale = ContentScale.Crop,
+            .clip(RoundedCornerShape(size = dimensionResource(R.dimen.border_radius))),
+        contentScale = ContentScale.Fit,
         painter = painterResource(dayIcon),
-
-        // Content Description is not needed here - image is decorative, and setting a null content
-        // description allows accessibility services to skip this element during navigation.
-
         contentDescription = null
     )
 }
@@ -223,24 +222,24 @@ fun DayIcon(
  * Composable that displays a day's name and age.
  *
  * @param dayNumber is the resource ID for the string of the day's number
- * @param daySubtitle is the Int that represents the day's subtitle
+ * @param dayDescription is the Int that represents the day's subtitle
  * @param modifier modifiers to set to this composable
  */
 @Composable
 fun DayInformation(
     @StringRes dayNumber: Int,
-    daySubtitle: Int,
+    dayDescription: Int,
     modifier: Modifier = Modifier
 ) {
-    Column(modifier = modifier) {
+    Column(modifier = modifier, verticalArrangement = Arrangement.Center) {
         Text(
             text = stringResource(dayNumber),
             style = MaterialTheme.typography.displayMedium,
             modifier = Modifier.padding(top = dimensionResource(R.dimen.padding_small))
         )
         Text(
-            text = stringResource(daySubtitle),
-            style = MaterialTheme.typography.bodyLarge
+            text = stringResource(dayDescription),
+            style = MaterialTheme.typography.bodyLarge,
         )
     }
 }
@@ -248,23 +247,32 @@ fun DayInformation(
 /**
  * Composable that displays a day's hobbies.
  *
- * @param dayHobby is the resource ID for the text string of the hobby to display
+ * @param dayGoal is the resource ID for the text description of the day to display
  * @param modifier modifiers to set to this composable
  */
 @Composable
-fun DayHobby(
-    @StringRes dayHobby: Int,
+fun DayDetails(
+    @StringRes dayGoal: Int,
+    @StringRes dayTip: Int,
     modifier: Modifier = Modifier
 ) {
     Column(
         modifier = modifier
     ) {
         Text(
-            text = stringResource(R.string.about),
+            text = stringResource(R.string.goal),
             style = MaterialTheme.typography.labelSmall
         )
         Text(
-            text = stringResource(R.string.about, dayHobby),
+            text = stringResource(dayGoal),
+            style = MaterialTheme.typography.bodyLarge
+        )
+        Text(
+            text = stringResource(R.string.tip),
+            style = MaterialTheme.typography.labelSmall
+        )
+        Text(
+            text = stringResource(dayTip),
             style = MaterialTheme.typography.bodyLarge
         )
     }

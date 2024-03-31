@@ -30,28 +30,30 @@
     <string name="day_28">Day 28</string>
     <string name="day_29">Day 29</string>
     <string name="day_30">Day 30</string>
+
+    <!-- Descrições dos dias -->
     <string name="day_1_description">Adequate Hydration</string>
-    <string name="day_2_description">Include Vegetables in Every Meal</string>
+    <string name="day_2_description">Vegetables Every Day</string>
     <string name="day_3_description">30-Minute Walk</string>
     <string name="day_4_description">Reduce Sugar Intake</string>
-    <string name="day_5_description">10-Minute Meditation Practice</string>
+    <string name="day_5_description">10-Minute Meditation</string>
     <string name="day_6_description">Healthy Meal Planning</string>
     <string name="day_7_description">Rest Day</string>
     <string name="day_8_description">Morning Stretching</string>
     <string name="day_9_description">Vegetarian Meal</string>
-    <string name="day_10_description">Replace Unhealthy Snacks</string>
+    <string name="day_10_description">Healthy Snacks</string>
     <string name="day_11_description">Strength Training</string>
-    <string name="day_12_description">Screen-Free Time Before Bed</string>
-    <string name="day_13_description">Meal with Whole Grains</string>
+    <string name="day_12_description">No Screen Before Bed</string>
+    <string name="day_13_description">Whole Grains Meal</string>
     <string name="day_14_description">Yoga Day</string>
     <string name="day_15_description">Self-Care Day</string>
-    <string name="day_16_description">Meal with Plant-Based Protein</string>
+    <string name="day_16_description">Plant-Based Protein</string>
     <string name="day_17_description">Cardiovascular Exercise</string>
     <string name="day_18_description">Stress Management</string>
     <string name="day_19_description">Meal with Fiber</string>
     <string name="day_20_description">Gratitude Day</string>
     <string name="day_21_description">Active Relaxation Day</string>
-    <string name="day_22_description">Try a New Healthy Recipe</string>
+    <string name="day_22_description">A New Healthy Recipe</string>
     <string name="day_23_description">Deep Breathing Practice</string>
     <string name="day_24_description">Colorful Meal</string>
     <string name="day_25_description">Flexibility Training</string>
@@ -59,7 +61,74 @@
     <string name="day_27_description">Restorative Sleep</string>
     <string name="day_28_description">Creativity Day</string>
     <string name="day_29_description">Mindfulness Practice</string>
-    <string name="day_30_description">Celebrate Your Achievements</string>
-    <string name="about">About:</string>
+    <string name="day_30_description">Celebration</string>
+
+    <!-- Objetivos (Goals) -->
+    <string name="day_1_goal">Drink at least 8 glasses of water throughout the day.</string>
+    <string name="day_2_goal">Consume a serving of vegetables in every major meal.</string>
+    <string name="day_3_goal">Take a 30-minute walk.</string>
+    <string name="day_4_goal">Decrease consumption of sugary foods and beverages.</string>
+    <string name="day_5_goal">Engage in a 10-minute meditation session to relax the mind and reduce stress.</string>
+    <string name="day_6_goal">Plan healthy meals for the following week.</string>
+    <string name="day_7_goal">Take a day to rest and recharge.</string>
+    <string name="day_8_goal">Perform a 10-minute stretching routine in the morning.</string>
+    <string name="day_9_goal">Prepare a complete meal without meat.</string>
+    <string name="day_10_goal">Swap unhealthy snacks for more nutritious options.</string>
+    <string name="day_11_goal">Complete a strength training workout to strengthen muscles.</string>
+    <string name="day_12_goal">Disconnect from electronic devices at least an hour before bedtime.</string>
+    <string name="day_13_goal">Include whole grains in one of your main meals.</string>
+    <string name="day_14_goal">Practice a yoga session to improve flexibility, balance, and relaxation.</string>
+    <string name="day_15_goal">Take time to care for yourself and recharge.</string>
+    <string name="day_16_goal">Incorporate a plant-based protein source into one of your meals.</string>
+    <string name="day_17_goal">Engage in at least 20 minutes of cardiovascular activity.</string>
+    <string name="day_18_goal">Practice stress management techniques like deep breathing or mindfulness.</string>
+    <string name="day_19_goal">Include fiber-rich foods in one of your meals.</string>
+    <string name="day_20_goal">Practice gratitude by writing a list of things you are thankful for.</string>
+    <string name="day_21_goal">Engage in relaxing activities that also promote movement, such as gentle yoga or nature walks.</string>
+    <string name="day_22_goal">Experiment with cooking a new nutritious recipe.</string>
+    <string name="day_23_goal">Practice deep breathing exercises to promote relaxation and reduce stress.</string>
+    <string name="day_24_goal">Create a meal with a variety of colorful fruits and vegetables.</string>
+    <string name="day_25_goal">Perform a stretching routine to improve flexibility and prevent injury.</string>
+    <string name="day_26_goal">Dedicate time to learning something new or expanding your knowledge on a topic of interest.</string>
+    <string name="day_27_goal">Prioritize getting at least 7-8 hours of quality sleep tonight.</string>
+    <string name="day_28_goal">Engage in a creative activity that brings joy and inspiration.</string>
+    <string name="day_29_goal">Practice mindfulness meditation to increase present-moment awareness and reduce stress.</string>
+    <string name="day_30_goal">Reflect on your progress and celebrate completing the 30-day challenge.</string>
+
+    <!-- Dicas (Tips) -->
+    <string name="day_1_tip">Keep a water bottle nearby to remind yourself to stay hydrated regularly.</string>
+    <string name="day_2_tip">Try adding fresh vegetables to salads, sandwiches, or as a side dish in your meals.</string>
+    <string name="day_3_tip">Choose a convenient time of the day and a pleasant location for your walk, such as a park or trail.</string>
+    <string name="day_4_tip">Read food labels and opt for options with low sugar content or no added sugars.</string>
+    <string name="day_5_tip">Find a quiet place, sit comfortably, and focus on your breath during meditation.</string>
+    <string name="day_6_tip">Make a shopping list with healthy ingredients and choose nutritious recipes to prepare during the week.</string>
+    <string name="day_7_tip">Use your free time to relax, engage in activities you enjoy, and take care of yourself.</string>
+    <string name="day_8_tip">Start the day with gentle movements to release muscle tension and increase flexibility.</string>
+    <string name="day_9_tip">Explore tasty and nutritious vegetarian recipes to diversify your diet.</string>
+    <string name="day_10_tip">Keep healthy snacks like fruits, nuts, or yogurt handy to avoid less healthy choices.</string>
+    <string name="day_11_tip">Focus on basic exercises like push-ups, squats, and planks using your body weight or light weights.</string>
+    <string name="day_12_tip">Take a few minutes to focus on the present moment and release mental and physical tension.</string>
+    <string name="day_13_tip">Opt for foods like brown rice, quinoa, oats, or whole-grain bread to increase fiber and nutrient intake.</string>
+    <string name="day_14_tip">Follow an online yoga video or attend a local class for guidance and inspiration.</string>
+    <string name="day_15_tip">Do something that brings joy and relaxation, such as a hot bath, massage, or creative activity.</string>
+    <string name="day_16_tip">Try tofu, tempeh, legumes, or plant-based products for essential protein and nutrients.</string>
+    <string name="day_17_tip">Choose an activity you enjoy, such as running, cycling, swimming, or dancing, to elevate heart rate and burn calories.</string>
+    <string name="day_18_tip">Take a few minutes to focus on the present moment and release mental and physical tension.</string>
+    <string name="day_19_tip">Select fruits, vegetables, whole grains, and legumes to boost fiber intake and support digestive health.</string>
+    <string name="day_20_tip">Take a moment to reflect on the positive aspects of your life and express gratitude for them.</string>
+    <string name="day_21_tip">Combine relaxation with light physical activity to rejuvenate both body and mind.</string>
+    <string name="day_22_tip">Browse cookbooks, websites, or cooking apps for inspiration and choose a recipe that incorporates wholesome ingredients.</string>
+    <string name="day_23_tip">Find a quiet space, sit comfortably, and focus on deep, slow breaths to calm the mind and body.</string>
+    <string name="day_24_tip">Aim for a rainbow of colors on your plate to ensure a diverse range of vitamins, minerals, and antioxidants.</string>
+    <string name="day_25_tip">Focus on stretching major muscle groups, holding each stretch for 15-30 seconds without bouncing.</string>
+    <string name="day_26_tip">Explore online courses, books, podcasts, or documentaries to stimulate your mind and curiosity.</string>
+    <string name="day_27_tip">Create a relaxing bedtime routine, maintain a comfortable sleep environment, and limit exposure to screens before bedtime.</string>
+    <string name="day_28_tip">Try painting, writing, crafting, or any other creative outlet to express yourself and unleash your imagination.</string>
+    <string name="day_29_tip">Find a quiet space, sit comfortably, and focus on your breath or bodily sensations to anchor yourself in the present moment.</string>
+    <string name="day_30_tip">Take time to acknowledge your efforts, achievements, and the positive changes you have made towards a healthier lifestyle.</string>
+
+    <!-- Outras strings -->
+    <string name="goal">Goal:</string>
+    <string name="tip">Tip:</string>
     <string name="expand_button_content_description">See more or less information about a day.</string>
 </resources>
